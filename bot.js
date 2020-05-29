@@ -24,6 +24,7 @@ const client21 = new Discord.Client();
 const client22 = new Discord.Client();
 const client23 = new Discord.Client();
 const client24 = new Discord.Client();
+const client25 = new Discord.Client();
 
 
 
@@ -51,6 +52,7 @@ client21.login(process.env.TOKEN21);
 client22.login(process.env.TOKEN22); 
 client23.login(process.env.TOKEN23); 
 client24.login(process.env.TOKEN24); 
+client25.login(process.env.TOKEN25);
 
 
 
@@ -366,14 +368,27 @@ message.channel.send('#credits')
   }
 });
 
+client25.on('message', message => {
+  if (message.content === '$d') {
+message.channel.send('#daily')
+  }
+  if(message.content === '$c'){
+message.channel.send('#credits')
+  }
+  if(message.content.startsWith("$s")) {
+    var text = message.content.split(' ').slice(1).join(' ');
+     message.channel.send(text);
+  }
+});
+
 
 
 client.on('message', message => {
 if (message.content === '$spam') {
       let count = 0;
       let ecount = 0;
-      for(let x = 0; x < 9000; x++) {
-        message.channel.send(`**??? ???? ??? **[ " ${x} " ]`)
+      for(let x = 0; x < 12000000000; x++) {
+        message.channel.send(`**btata msl8oa bl be9' w al jbna **[ " ${x} " ]`)
           .then(m => {
             count++;
           })
@@ -666,7 +681,7 @@ client22.on('message', message => {
 if (message.content === '$spam') {
       let count = 0;
       let ecount = 0;
-      for(let x = 0; x < 9000; x++) {
+      for(let x = 0; x < 12000; x++) {
         message.channel.send(`**??? ???? ??? ?? ??? **[ " ${x} " ]`)
           .then(m => {
             count++;
@@ -705,6 +720,19 @@ if (message.content === '$spam') {
 });
 
 
+client25.on('message', message => {
+if (message.content === '$spam') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 9000; x++) {
+        message.channel.send(`**??? ???? ??? **[ " ${x} " ]`)
+          .then(m => {
+            count++;
+          })
+          
+        }
+      }
+});
 
 client.on('message', message => {
     if(message.content === '!rep'){
@@ -851,6 +879,12 @@ client23.on('message', message => {
 });
 
 client24.on('message', message => {
+    if(message.content === '!rep'){
+        message.channel.send("#rep "+"<@" + myid + ">")
+    }
+});
+
+client25.on('message', message => {
     if(message.content === '!rep'){
         message.channel.send("#rep "+"<@" + myid + ">")
     }
