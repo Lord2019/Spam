@@ -387,7 +387,7 @@ client.on('message', message => {
 if (message.content === '$spam') {
       let count = 0;
       let ecount = 0;
-      for(let x = 0; x < 12000000000; x++) {
+      for(let x = 0; x < 1200; x++) {
         message.channel.send(`**btata msl8oa bl be9' w al jbna **[ " ${x} " ]`)
           .then(m => {
             count++;
