@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const myid = ['495595710650122241']
-const client = new Discord.Client();
+const client = new Discord.Client('492248567981932546');
 const client2 = new Discord.Client();
 const client3 = new Discord.Client();
 const client4 = new Discord.Client();
@@ -401,7 +401,7 @@ client2.on('message', message => {
 if (message.content === '$spam') {
       let count = 0;
       let ecount = 0;
-      for(let x = 0; x < 120000; x++) {
+      for(let x = 0; x < 1000; x++) {
         message.channel.send(`**nowvieviefhnvfoienvfiewvneijinowinjenjoviefnojivfnjowivnojivfnjiwevfnjifvewnjiowvefnijovefinjovfwnijovfenijoevfnijoevfoinjevfwinjovfewinjevfwnjievfwnoijevfwinjoevfwnjievfwinjoefvwinjfveinjoevfinjovefwnoijevfinjevfnijovfeinjevfnijoefvwinojfevinjoefvinjoevfwinjofevnijovfewinjoegoingwihoewinoewniovenijovfeinjonijofevoinfewoihbvfiwbifobvf**[ " ${x} " ]`)
           .then(m => {
             count++;
